@@ -1,0 +1,27 @@
+* {
+	font-family: 'Mochiy Pop P One', sans-serif;
+}
+$estilos:(
+	color: red,
+	centro: center,
+	tFuente: 25px,
+	1rem: 1rem
+	);
+.textoInicio{
+	background-color: map-get($estilos, color);
+	text-align: map-get($estilos, centro);
+	font-size: map-get($estilos, tFuente);
+	padding: map-get($estilos, 1rem);
+}
+.textoLugares{
+	@extend .textoInicio;
+	background-color: blue!important;
+}
+@mixin flex-row-center{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.mixin{
+	@include flex-row-center;
+}
